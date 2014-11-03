@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+	<div class="row-fluid">
+		<div class="col-md-6 col-md-offset-3"> 
+			<div class="area">
+                <form class="form-horizontal">
+                    <div class="heading">
+                        <h4 class="form-heading">Autentificaci&oacute;n</h4>
+                    </div>
+
+                    <div class="control-group">
+                        <label class="control-label" for="inputRut">Rut</label>
+                        <div class="controls">
+                        	<input id="inputRut" placeholder="14.566.029-7" type="text">		                            
+                        </div>
+                    </div>
+
+                    <div class="control-group">
+                        <label class="control-label" for="inputMail">Correo Electr&oacute;nico</label>
+                        <div class="controls">
+                            <input id="inputMail" placeholder="persona@dominio.cl" type="text">
+                        </div>
+                    </div>
+
+                    <div class="control-group">
+                        <div class="controls">                        	
+                        		<button  class="btn btn-primary" type="button">Registrarte</button>
+                        	</p>
+                        </div>
+                    </div>
+
+                    <div class="alert alert-info">
+	            		<button class="close" data-dismiss="alert" type="button">×</button> <strong>Confirmation:</strong>
+	            		Se ha enviado la confirmaci&oacute; a su correo electr&oacute;nico.<br>Gracias por registrarse.
+            		</div>
+                </form>
+            </div>
+        </div>
+	</div>
+{% endblock %}
+
+

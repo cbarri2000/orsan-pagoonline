@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Ejemplo validar RUT Chileno</title>
+		<script type="text/javascript" src='static/js/validaciones.js'></script>
+		<script type="text/javascript">
+			function onRutBlur(obj) {
+				if (VerificaRut(obj.value))
+					alert("Rut correcto");
+				else 
+					alert("Rut incorrecto");
+			}
+		</script>
+	</head>
+	<body>
+		Ingrese RUT: <input type="text" id="txtRut" onblur="onRutBlur(this);" />
+	</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang='es'>
+	<head>
+		<title>Listado de usuarios</title>
+		<meta charset='utf-8'>
+	</head>
+	<body>
+		<h1>Listado de Usuarios</h1>
+		{% if lista %}
+			{% for elemento in lista %}
+				<ul>
+					<li><strong>{{elemento.rut}}</strong></li>
+					<li>{{elemento.mail}}</li>
+					<li>{{elemento.clave}}</li>
+					<li>{{elemento.nombre}}</li>
+					<li>{{elemento.direccion}}</li>
+					<li>{{elemento.telefono}}</li>
+				</ul>
+			{% endfor %}
+		{% else %}
+			<strong>No existen usuarios</strong>
+		{% endif %}		
+	</body>
+</html>

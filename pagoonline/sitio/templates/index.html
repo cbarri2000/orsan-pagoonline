@@ -1,0 +1,67 @@
+{% extends "base.html" %}
+
+{% block extra_head %}
+        <!-- Validacion RUT -->
+        <script type="text/javascript" src='static/js/validaciones.rut.js'></script>
+
+        <!-- RUT -->
+        <script type="text/javascript">
+            function onRutBlur(obj) {
+                if (VerificaRut(obj.value))
+                    alert("Rut correcto");
+                else 
+                    
+                    alert("Rut incorrecto");
+            }
+        </script>
+{% endblock %}
+
+{% block content %}
+	<div class="row-fluid">
+		<div class="col-md-6 col-md-offset-3"> 
+			<div class="area">
+                <form class="form-horizontal">
+                    <div class="heading">
+                        <h4 class="form-heading">Autentificaci&oacute;n</h4>
+                    </div>
+
+                    <div class="control-group">
+                        <label class="control-label" for="inputRut">Rut</label>
+                        <div class="controls">
+                        	<input id="inputRut" placeholder="14.566.029-7" type="text" onblur="onRutBlur(this);">		                            
+                        </div>
+                    </div>
+                    <div id="myAlertRut" class="alert alert-danger alert-error" >
+                        <a href="#" class="close" data-dismiss="alert">&times;</a>
+                        <strong>Rut invalido!</strong> Por favor, ingrese Rut valido.
+                    </div>
+
+                    <div class="control-group">
+                        <label class="control-label" for="inputClave">Clave</label>
+                        <div class="controls">
+                            <input id="inputClave" placeholder="persona@dominio.cl" type="text">
+                        </div>
+                    </div>                   
+
+                    <div class="control-group">
+                        <div class="controls">
+                        	<p>
+	                        	<button class="btn btn-success" type="submit">Ingresar</button> 
+	                        	<a class="btn btn-link"href="#">¿Olvido su Contraseña?</a></label>
+	                        </p>
+	                        <p>
+	                        	¿Eres un nuevo usuarios?
+                        		<button  class="btn btn-primary" type="button">Registrarte</button>
+                        	</p>
+                        </div>
+                    </div>
+
+                    <!-- <div class="alert alert-error">
+                        <button class="close" data-dismiss="alert" type="button">×</button> 
+                        <strong>Acceso Denegado!</strong>Por favor, ingrese datos validos.
+                    </div> -->
+                </form>
+            </div>
+        </div>
+	</div>
+{% endblock %}
